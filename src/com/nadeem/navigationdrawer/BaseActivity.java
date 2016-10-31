@@ -1,7 +1,6 @@
 package com.nadeem.navigationdrawer;
 
 import java.util.ArrayList;
-
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
@@ -17,7 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-public class BaseActivity extends AppCompatActivity{
+public class BaseActivity extends AppCompatActivity{ //changed from depricated ActionBarActivity
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -78,7 +77,7 @@ public class BaseActivity extends AppCompatActivity{
         //mDrawerToggle.syncState();
 
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-                toolbar, // nav menu toolbar
+                toolbar, // nav menu toolbar instead of icon
                 R.string.menu, // nav drawer open - description for accessibility
                 R.string.app_name // nav drawer close - description for accessibility
         ) {
